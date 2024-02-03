@@ -1,8 +1,25 @@
 # NLP-Spam-detection
 The SMS Spam Collection is a set of SMS tagged messages that have been collected for SMS Spam research. It contains one set of SMS messages in English of 5,574 messages, tagged acording being ham (legitimate) or spam.
 
+These preprocessing steps are common in NLP pipelines to prepare text data for analysis. Let me briefly explain each step:
 
-The first step to use XGBoost model is to import its library from xgboost according to the 
+Tokenization:
+
+Tokenization involves breaking a text into individual units, often words or subwords. This step is crucial for further analysis as it converts a continuous text into a sequence of discrete tokens.
+Lowercasing:
+
+Converting all text to lowercase helps ensure uniformity in the data. This is important because NLP tasks often treat words in a case-insensitive manner. Lowercasing helps in reducing the dimensionality of the data and improves consistency.
+Stopword Removal:
+
+Stopwords are common words (e.g., "and", "the", "is") that are often removed from text data because they don't carry significant meaning and can introduce noise. Removing stopwords can improve the efficiency and accuracy of downstream tasks.
+POS Tagging (Part-of-Speech Tagging):
+
+POS tagging involves assigning a grammatical category (noun, verb, adjective, etc.) to each word in a sentence. This information is useful for understanding the syntactic structure of a sentence and can be beneficial for various NLP tasks such as information extraction, parsing, and sentiment analysis.
+Lemmatization:
+
+Lemmatization is the process of reducing words to their base or root form. For example, "running" becomes "run." Lemmatization helps in normalizing words, reducing inflected forms to a common base form. This can improve the coherence of the data and help capture the essential meaning of words.
+
+The first step to use the XGBoost model is to import its library from xgboost according to the 
 figure above. The XGBClassifier module from xgboost library would be the main method to build 
 the model itself.
 First of all, create instance of XGBClassifier() and assign it to variable xgb. The xgb will 
